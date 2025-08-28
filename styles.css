@@ -1,0 +1,754 @@
+/* =========================================================
+   FONT & VARIABILI
+========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap');
+
+:root{
+  --accent: #d4b670;
+  --accent-dark:#b79d57;
+  --text:#222;
+  --bg:#fdfdfc;
+  --muted:#666;
+  --card:#ffffff;
+  --shadow: 0 4px 12px rgba(0,0,0,.08);
+  --radius: 14px;
+  --maxw: 1200px;
+}
+
+/* =========================================================
+   RESET & BASE
+========================================================= */
+*{ margin:0; padding:0; box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  display:flex;
+  flex-direction:column;
+}
+img{ display:block; max-width:100%; height:auto; object-fit:cover; }
+
+/* Utilità */
+.container{ max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+.center{ text-align:center; }
+
+/* =========================================================
+   HEADER
+========================================================= */
+header{
+  position: sticky; top:0; z-index:100;
+  background:#fff; box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 1rem 2rem;
+}
+.logo{
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: 1.9rem;
+  color:#111;
+  white-space:nowrap;
+}
+nav ul{ list-style:none; display:flex; gap:1.25rem; align-items:center; }
+nav a{
+  text-decoration:none; color: var(--text);
+  font-weight:500; transition: color .25s ease;
+}
+nav a:hover, nav a.active{ color: var(--accent); }
+
+/* =========================================================
+   SLIDER (INDEX) 
+========================================================= */
+.hero-slider {
+  margin: 2rem auto 1rem;
+  width: 100%;
+  max-width: var(--maxw);
+  padding: 0 1.25rem;
+  position: relative;
+}
+
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-slider .slider-container {
+  display: flex;
+  transition: transform 0.6s ease;
+  width: 300%;
+}
+
+.hero-slider .slide {
+  flex: 0 0 33.333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  height: 360px;
+}
+
+.hero-slider .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* =========================================================
+   PROMOZIONI (INDEX)
+========================================================= */
+.promotions{
+  max-width: var(--maxw);
+  margin: 1rem auto 2rem;
+  padding: 0 1.25rem;
+  display:flex; gap:2rem; justify-content:center; align-items:center;
+  flex-wrap:wrap;
+  font-weight:600;
+  color:#333;
+}
+.promotions > div{ white-space:nowrap; }
+
+/* =========================================================
+   TITOLI SEZIONI
+========================================================= */
+.collection-header{
+  padding: 2rem 1.25rem 1rem;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  text-align: center;
+}
+.collection-header h2{
+  font-size: 2rem;
+  color:#333;
+  margin-bottom: 0.5rem;
+}
+.collection-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+   GRIGLIE PRODOTTI
+========================================================= */
+.products-grid,
+#best-seller-grid,
+#new-arrivals-grid,
+#products-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: var(--maxw);
+  margin: 0 auto 3rem;
+  padding: 0 1.25rem;
+  justify-items: center;
+}
+.product-card{
+  width: 100%;
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  text-align:center;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.product-card:hover{ transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,.09); }
+.product-card img{
+  width:100%; height: 220px; object-fit: cover;
+  border-radius: 10px; margin-bottom: 1rem;
+}
+.product-card h3{ font-size:1.1rem; margin-bottom: .5rem; color:#222; }
+.product-card p{ font-size:1rem; color:#555; margin-bottom: 0.5rem; }
+
+/* =========================================================
+   FILTRO A TENDINA (PRODOTTI)
+========================================================= */
+.filters-container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filters{
+  position: relative;
+  width: 48px; height: 48px;
+  margin-bottom: 1rem;
+}
+.filters-toggle{
+  width: 48px; height: 48px;
+  display:flex; align-items:center; justify-content:center;
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: var(--shadow);
+}
+.filters-toggle img{
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.filters-content{
+  position:absolute; top: 56px; right: 0;
+  background:#fff; border-radius: var(--radius);
+  padding: 1rem 1rem .9rem;
+  box-shadow: var(--shadow);
+  width: 280px; max-width: 90vw;
+  opacity: 0; visibility: hidden;
+  transition: opacity .2s ease, transform .2s ease, visibility 0s linear .2s;
+  z-index: 20;
+}
+.filters:hover .filters-content,
+.filters:focus-within .filters-content{
+  opacity: 1; visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+.filters-content label{
+  display:flex; flex-direction:column; gap:.4rem;
+  font-weight:600; color:#333; margin-bottom:.7rem;
+}
+.filters-content input,
+.filters-content select{
+  padding:.65rem .7rem; border:1px solid #ddd; border-radius: 8px;
+  font: inherit;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.filters-content input:focus,
+.filters-content select:focus{
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212,182,112,.25);
+  outline: none;
+}
+
+/* =========================================================
+   HERO TESTUALE (PRODOTTI)
+========================================================= */
+.hero{
+  text-align:center;
+  padding: 3rem 1.25rem 2rem;
+  background: #f8f8f8;
+}
+.hero h1{ font-size: 2.2rem; margin-bottom: .5rem; color:#333; }
+.hero p{ font-size: 1.05rem; color:#555; }
+
+/* =========================================================
+   MARCHE (INDEX)
+========================================================= */
+.brands-section{
+  max-width: var(--maxw);
+  margin: 0 auto 2.5rem;
+  padding: 0 1.25rem;
+}
+.brands-section h2{
+  text-align:center; font-size: 1.6rem; color:#333; margin-bottom: 1rem;
+}
+.brands-grid{
+  display:flex; justify-content:center; align-items:center;
+  gap: 1.5rem; flex-wrap:wrap;
+}
+.brands-grid img{
+  width: 120px; height: 60px; object-fit: contain;
+  filter: saturate(0.85);
+  transition: transform .2s ease, filter .2s ease;
+}
+.brands-grid img:hover{ transform: translateY(-3px); filter: saturate(1); }
+
+/* =========================================================
+   CHI SIAMO
+========================================================= */
+.about-container {
+  max-width: var(--maxw);
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+}
+
+.about-text-full {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.about-text-full h3 {
+  color: #333;
+  margin: 1.8rem 0 0.8rem;
+  font-size: 1.4rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.about-text-full h3:first-child {
+  margin-top: 0;
+}
+
+.about-text-full ul {
+  list-style: none;
+  margin: 1.2rem 0;
+}
+
+.about-text-full li {
+  padding: 0.6rem 0;
+  position: relative;
+  padding-left: 1.8rem;
+  font-size: 1.05rem;
+}
+
+.about-text-full li:before {
+  content: "•";
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  top: 0.4rem;
+}
+
+.team-section {
+  max-width: var(--maxw);
+  margin: 0 auto 3rem;
+  padding: 0 1.25rem;
+}
+
+.team-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #333;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.team-section h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--accent);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.team-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+}
+
+.team-card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  border-radius: 8px;
+}
+
+.team-card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.team-card p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.team-card p:first-of-type {
+  font-weight: 600;
+  color: var(--accent-dark);
+}
+
+/* =========================================================
+   CONTATTI
+========================================================= */
+.contact-page{
+  max-width: var(--maxw);
+  margin: 2rem auto 3rem;
+  padding: 0 1.25rem;
+  display:grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items:start;
+  gap: 2rem;
+}
+.contact-page section{ width: 100%; }
+
+.contact-page form{
+  display:flex; flex-direction:column; gap: 1rem;
+  background:#fff; border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 1.25rem;
+}
+.contact-page label{
+  display:flex; flex-direction:column; gap:.45rem;
+  font-weight:600; color:#333;
+}
+.contact-page input,
+.contact-page textarea{
+  padding: .8rem .9rem;
+  border:1px solid #ddd; border-radius: 10px; font:inherit;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.contact-page input:focus,
+.contact-page textarea:focus{
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(212,182,112,.25);
+  outline:none;
+}
+.contact-page button{
+  background: var(--accent); color:#111; border:none;
+  padding: .9rem 1.1rem; border-radius: 10px;
+  font-weight:700; cursor:pointer; transition: background .2s ease, transform .1s ease;
+}
+.contact-page button:hover{ background: var(--accent-dark); }
+.contact-page button:active{ transform: translateY(1px); }
+
+.contact-info{
+  background:#fff; border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+}
+.contact-info h3{ font-size:1.15rem; margin-bottom:.6rem; }
+.contact-info ul{ list-style:none; display:flex; flex-direction:column; gap:.6rem; }
+.contact-info li{ padding-bottom:.6rem; border-bottom:1px solid #eee; }
+.contact-info a{ color: var(--accent-dark); text-decoration:none; }
+.contact-info a:hover{ text-decoration:underline; }
+
+.whatsapp-button{
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:#25D366; color:#fff; text-decoration:none;
+  border-radius: 999px; padding: .45rem .7rem;
+  font-weight:700; font-size:.9rem;
+  margin-top: .5rem;
+  transition: filter .2s ease, transform .1s ease;
+}
+.whatsapp-button:hover{ filter: brightness(0.95); }
+.whatsapp-button:active{ transform: translateY(1px); }
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer{
+  text-align:center; padding: 2rem; color:#777; background:#f9f9f9;
+  margin-top:auto;
+}
+
+/* =========================================================
+   PAGINA DETTAGLIO PRODOTTO
+========================================================= */
+.product-detail-page {
+    max-width: var(--maxw);
+    margin: 2rem auto;
+    padding: 0 1.25rem;
+}
+
+.breadcrumb {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.breadcrumb a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.product-detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.product-info h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.product-info .brand {
+    font-size: 1.2rem;
+    color: var(--accent-dark);
+    margin-bottom: 0.5rem;
+}
+
+.product-info .type {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.product-info .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.product-info .description {
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+.notes {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: var(--radius);
+}
+
+.notes h3 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* =========================================================
+   LINK PRODOTTI
+========================================================= */
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.product-link:hover {
+    color: inherit;
+}
+
+.product-link img {
+    transition: transform 0.3s ease;
+}
+
+.product-link:hover img {
+    transform: scale(1.05);
+}
+
+.loading, .error, .no-products {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+    grid-column: 1 / -1;
+}
+
+.loading {
+    color: #666;
+}
+
+.error {
+    color: #d32f2f;
+}
+
+.no-products {
+    color: #666;
+    font-style: italic;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+/* =========================================================
+   SHOPIFY BUY BUTTON
+========================================================= */
+.shopify-buy__btn {
+    background: var(--accent) !important;
+    color: #111 !important;
+    border: none !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;
+    margin-top: 1rem !important;
+}
+
+.shopify-buy__btn:hover {
+    background: var(--accent-dark) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Nascondi gli elementi non necessari di Shopify */
+.shopify-buy__product__title,
+.shopify-buy__product__price {
+    display: none !important;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 1024px){
+  .hero-slider .slide{ height: 320px; }
+}
+
+@media (max-width: 768px){
+  header{ padding: .9rem 1.25rem; flex-direction:column; gap:.6rem; }
+  nav ul{ flex-wrap:wrap; justify-content:center; }
+
+  .hero-slider{ padding: 0 1rem; }
+  .hero-slider .slide{ height: 260px; }
+
+  .promotions{ gap: 1rem; }
+
+  .contact-page{
+    grid-template-columns: 1fr; gap: 1.25rem;
+  }
+  
+  .filters-container {
+    justify-content: center;
+  }
+  
+  .filters-content {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+  }
+  
+  .filters:hover .filters-content,
+  .filters:focus-within .filters-content {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .about-text-full {
+    padding: 1.5rem;
+  }
+
+  .team-card {
+    padding: 1.5rem;
+  }
+
+  .product-detail-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-info h1 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px){
+  .logo{ font-size: 1.7rem; }
+  .hero-slider .slide{ height: 220px; }
+  .brands-grid img{ width: 100px; height: 52px; }
+  .products-grid, #products-grid{ grid-template-columns: 1fr; }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-card img {
+    width: 150px;
+    height: 150px;
+  }
+}
+/* Carrello flottante (disabilitato: manteniamo solo il carrello ufficiale Shopify) */
+.floating-cart { display: none !important; }
+
+.floating-cart:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+.floating-cart-icon {
+    color: white;
+    font-size: 24px;
+}
+
+.floating-cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ff4757;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Container carrello Shopify */
+#shopify-cart-container {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 350px;
+    height: 100vh;
+    background: white;
+    z-index: 1001;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+#shopify-cart-container.open {
+    right: 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.overlay.open {
+    display: block;
+}
+
+.close-cart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profumeria del Sultano | Chi Siamo - La Nostra Storia</title>
+    <meta name="description" content="Scopri la storia di Profumeria del Sultano, eccellenza nelle fragranze dal 2004. La nostra missione, valori e il team esperto che seleziona profumi di lusso.">
+    <meta name="keywords" content="profumeria del sultano, chi siamo, storia profumeria, profumi arabi, fragranze di lusso, team esperto">
+    <meta name="author" content="Profumeria del Sultano">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
+    <script src="shopify-cart.js"></script>
+<script src="auth.js"></script>
+<!-- SEO base -->
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#d4b670">
+    <link rel="canonical" href="https://www.profumeriadelsultano.it/chi-siamo.html">
+    <link rel="alternate" hreflang="it-IT" href="https://www.profumeriadelsultano.it/chi-siamo.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.profumeriadelsultano.it/chi-siamo.html">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Profumeria del Sultano">
+    <meta property="og:title" content="Chi Siamo | Profumeria del Sultano">
+    <meta property="og:description" content="La nostra storia: eccellenza nelle fragranze dal 2004.">
+    <meta property="og:url" content="https://www.profumeriadelsultano.it/chi-siamo.html">
+    <meta property="og:image" content="https://www.profumeriadelsultano.it/images/slider3.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chi Siamo | Profumeria del Sultano">
+    <meta name="twitter:description" content="La nostra storia: eccellenza nelle fragranze dal 2004.">
+    <meta name="twitter:image" content="https://www.profumeriadelsultano.it/images/slider3.jpg">
+</head>
+<body>
+
+<header>
+    <div class="logo">Profumeria del Sultano</div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="prodotti.html">Prodotti</a></li>
+            <li><a href="chi-siamo.html" class="active">Chi Siamo</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+            <li id="nav-login"><a id="link-login" href="#">Accedi / Registrati</a></li>
+            <li id="nav-account" style="display:none"><a href="https://profumeriadelsultano.myshopify.com/account" target="_blank">Account</a></li>
+            <li id="nav-logout" style="display:none"><a id="link-logout" href="#">Esci</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="collection-header">
+    <h1>La Nostra Storia</h1>
+    <p>Eccellenza nelle fragranze dal 2004</p>
+</section>
+
+<section class="about-container">
+    <div class="about-text-full">
+        <h2>La Nostra Passione</h2>
+        <p>Profumeria del Sultano è un negozio online di profumi e cosmetici, fondato nel 2004, che mira a offrire prodotti e servizi eccezionali. Fin dall'inizio, il nostro team ha combinato esperienza e passione per le fragranze.</p>
+        
+        <h2>La Nostra Missione</h2>
+        <p>La nostra missione è garantire qualità e autenticità per ogni cliente, collaborando solo con fornitori verificati. Offriamo un'ampia selezione di prodotti, servizio clienti eccezionale e promozioni vantaggiose.</p>
+        
+        <h2>I Nostri Valori</h2>
+        <ul>
+            <li>Autenticità dei prodotti</li>
+            <li>Qualità garantita</li>
+            <li>Servizio clienti dedicato</li>
+            <li>Competenza nelle fragranze</li>
+        </ul>
+    </div>
+</section>
+
+<section class="team-section">
+    <h2>Il Nostro Team</h2>
+    <div class="team-grid">
+        <div class="team-card">
+            <img src="images/pietro.jpg" alt="Pietro Vizzutti - Fondatore e gestore generale di Profumeria del Sultano">
+            <h3>Pietro Vizzutti</h3>
+            <p>Fondatore e gestore generale</p>
+            <p>Esperto di profumi con oltre 20 anni di esperienza nel settore delle fragranze di lusso.</p>
+        </div>
+        <div class="team-card">
+            <img src="images/mattia.jpg" alt="Mattia Liberto - Co-fondatore e responsabile relazioni di Profumeria del Sultano">
+            <h3>Mattia Liberto</h3>
+            <p>Co-fondatore e responsabile relazioni</p>
+            <p>Specializzato nella selezione dei migliori profumi arabi e nella cura della clientela.</p>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <p>© 2025 Profumeria del Sultano · Tutti i diritti riservati</p>
+    <p>Powered by Shopify</p>
+</footer>
+
+<script src="placeholder-images.js"></script>
+
+<!-- Auth Modal -->
+<div id="auth-modal" style="display:none; position:fixed; inset:0; background: rgba(0,0,0,.5); z-index:2000;">
+  <div style="width:90%; max-width:420px; margin: 6rem auto; background:#fff; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.2); overflow:hidden;">
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 1.25rem; border-bottom:1px solid #eee;">
+      <strong>Area Cliente</strong>
+      <button id="auth-close" style="background:none; border:none; font-size:20px; cursor:pointer">×</button>
+    </div>
+    <div style="padding:1rem 1.25rem;">
+      <div style="display:flex; gap:.5rem; margin-bottom:1rem;">
+        <button data-auth-tab="auth-login" style="padding:.5rem 1rem; border:1px solid #ddd; background:#fafafa; cursor:pointer; border-radius:8px;">Accedi</button>
+        <button data-auth-tab="auth-register" style="padding:.5rem 1rem; border:1px solid #ddd; background:#fafafa; cursor:pointer; border-radius:8px;">Registrati</button>
+      </div>
+
+      <form id="auth-login-form" class="auth-form" style="display:block; display:flex; flex-direction:column; gap:.75rem;">
+        <label>Email
+          <input type="email" name="email" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <label>Password
+          <input type="password" name="password" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <button type="submit" style="background:#d4b670; border:none; padding:.7rem 1rem; border-radius:8px; cursor:pointer; font-weight:700;">Accedi</button>
+      </form>
+
+      <form id="auth-register-form" class="auth-form" style="display:none; flex-direction:column; gap:.75rem;">
+        <label>Nome
+          <input type="text" name="firstName" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <label>Cognome
+          <input type="text" name="lastName" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <label>Email
+          <input type="email" name="email" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <label>Password
+          <input type="password" name="password" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <button type="submit" style="background:#d4b670; border:none; padding:.7rem 1rem; border-radius:8px; cursor:pointer; font-weight:700;">Crea account</button>
+      </form>
+
+      <div id="auth-message" style="margin-top:1rem; color:#555;"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

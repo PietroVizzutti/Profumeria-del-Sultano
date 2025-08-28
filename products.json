@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Oud Mood",
+    "brand": "Lattafa",
+    "tipo": "Oud",
+    "price": 45,
+    "category": "Best Seller",
+    "image": "images/oud_mood.jpg",
+    "shopifyId": "10326865903943",
+    "description": "Un profumo Oud intenso e avvolgente, perfetto per le serate speciali. Note legnose e speziate che persistono a lungo sulla pelle.",
+    "notes": "Testa: Zafferano, Cardamomo | Cuore: Oud, Legno di Cedro | Base: Muschio, Ambra"
+  },
+  {
+    "name": "Majestic",
+    "brand": "Asdaaf",
+    "tipo": "Ambrato",
+    "price": 55,
+    "category": "Best Seller",
+    "image": "images/majestic.jpg",
+    "shopifyId": "10326865969479",
+    "description": "Fragranza maestosa con accordi ambrati e dolci. Ideale per chi ama i profumi caldi e sensuali.",
+    "notes": "Testa: Bergamotto, Pepe Rosa | Cuore: Rosa, Gelsomino | Base: Ambra, Vaniglia, Muschio"
+  },
+  {
+    "name": "Amber Spirit",
+    "brand": "Al Haramain",
+    "tipo": "Orientale",
+    "price": 60,
+    "category": "Best Seller",
+    "image": "images/amber_spirit.jpg",
+    "shopifyId": "10326866002247",
+    "description": "Spirito ambrato che evoca mistero e sensualità. Una fragranza orientale che cattura l'essenza dei souk arabi.",
+    "notes": "Testa: Bergamotto, Limone | Cuore: Rosa, Patchouli | Base: Ambra, Vaniglia, Legno di Sandalo"
+  },
+  {
+    "name": "Musk Essence",
+    "brand": "Al Haramain",
+    "tipo": "Musk",
+    "price": 58,
+    "category": "Best Seller",
+    "image": "images/musk_essence.jpg",
+    "shopifyId": "10326866067783",
+    "description": "Essenza di muschio puro e raffinato. Un profumo che avvolge con delicatezza e persistenza eccezionale.",
+    "notes": "Testa: Lavanda, Bergamotto | Cuore: Muschio Bianco, Iris | Base: Legno di Cedro, Ambrette"
+  },
+  {
+    "name": "Golden Oud",
+    "brand": "Lattafa",
+    "tipo": "Oud",
+    "price": 70,
+    "category": "Special Edition",
+    "image": "images/golden_oud.jpg",
+    "shopifyId": "10326866100551",
+    "description": "Oud prezioso come l'oro. Una fragranza lussuosa che unisce la ricchezza del legno al calore delle spezie orientali.",
+    "notes": "Testa: Zafferano, Cardamomo | Cuore: Oud Malaysiano, Rosa | Base: Ambra, Vaniglia, Muschio"
+  },
+  {
+    "name": "Royal Musk",
+    "brand": "Asdaaf",
+    "tipo": "Musk",
+    "price": 65,
+    "category": "Special Edition",
+    "image": "images/royal_musk.jpg",
+    "shopifyId": "10326866166087",
+    "description": "Muschio degno di un re. Una composizione regale che unisce eleganza e potenza in un'unica fragranza.",
+    "notes": "Testa: Bergamotto, Neroli | Cuore: Muschio, Fiori d'Arancio | Base: Legno di Vetiver, Incenso"
+  },
+  {
+    "name": "Desert Rose",
+    "brand": "Al Haramain",
+    "tipo": "Floreale",
+    "price": 50,
+    "category": "Special Edition",
+    "image": "images/desert_rose.jpg",
+    "shopifyId": "10326866198855",
+    "description": "Rosa del deserto che fiorisce nell'aria calda. Un fiore raro e prezioso racchiuso in una fragranza unica.",
+    "notes": "Testa: Rosa Bulgara, Pepe Nero | Cuore: Gelsomino, Ylang-Ylang | Base: Muschio, Vaniglia, Benzoino"
+  },
+  {
+    "name": "Amber Noir",
+    "brand": "Asdaaf",
+    "tipo": "Ambrato",
+    "price": 68,
+    "category": "Special Edition",
+    "image": "images/amber_noir.jpg",
+    "shopifyId": "10326866231623",
+    "description": "Ambra nera misteriosa e seducente. Una fragranza oscura che nasconde segreti e passioni nascoste.",
+    "notes": "Testa: Incenso, Mirra | Cuore: Ambra Grigia, Patchouli | Base: Legno di Ebano, Vaniglia Nera"
+  },
+  {
+    "name": "Oud Intense",
+    "brand": "Lattafa",
+    "tipo": "Oud",
+    "price": 80,
+    "category": "Nuovi Arrivi",
+    "image": "images/oud_intense.jpg",
+    "shopifyId": "10326866297159",
+    "description": "Intensità pura di Oud. Per chi cerca una fragranza potente che lasci un'impronta indelebile.",
+    "notes": "Testa: Pepe Nero, Zafferano | Cuore: Oud Indiano, Legno di Rosa | Base: Muschio, Ambra, Zibetto"
+  },
+  {
+    "name": "Mystic Amber",
+    "brand": "Asdaaf",
+    "tipo": "Ambrato",
+    "price": 75,
+    "category": "Nuovi Arrivi",
+    "image": "images/mystic_amber.jpg",
+    "shopifyId": "10326866329927",
+    "description": "Ambra mistica che evoca antiche leggende. Una fragranza spirituale che connette con le energie dell'universo.",
+    "notes": "Testa: Incenso, Mirra | Cuore: Ambra, Benzoino | Base: Legno di Sandalo, Patchouli"
+  },
+  {
+    "name": "Royal Oud",
+    "brand": "Al Haramain",
+    "tipo": "Oud",
+    "price": 90,
+    "category": "Nuovi Arrivi",
+    "image": "images/royal_oud.jpg",
+    "shopifyId": "10326866362695",
+    "description": "Oud reale per personalità aristocratiche. La massima espressione di lusso e raffinatezza nella profumeria araba.",
+    "notes": "Testa: Bergamotto, Limone | Cuore: Oud Reale, Rosa | Base: Legno di Cedro, Muschio, Vaniglia"
+  },
+  {
+    "name": "Velvet Oud",
+    "brand": "Lattafa",
+    "tipo": "Oud",
+    "price": 85,
+    "category": "Nuovi Arrivi",
+    "image": "images/velvet_oud.jpg",
+    "shopifyId": "10326866428231",
+    "description": "Oud vellutato che accarezza la pelle. Una fragranza soffice ma persistente, come seta preziosa.",
+    "notes": "Testa: Zafferano, Cardamomo | Cuore: Oud, Cuoio | Base: Vaniglia, Benzoino, Muschio"
+  }
+]

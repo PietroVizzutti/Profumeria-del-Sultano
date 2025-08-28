@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profumeria del Sultano | Prodotti</title>
+    <meta name="description" content="Scopri la collezione di profumi arabi Profumeria del Sultano. Acquista online profumi di lusso con spedizione rapida.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- SEO base -->
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#d4b670">
+    <link rel="canonical" href="https://www.profumeriadelsultano.it/prodotti.html">
+    <link rel="alternate" hreflang="it-IT" href="https://www.profumeriadelsultano.it/prodotti.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.profumeriadelsultano.it/prodotti.html">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Profumeria del Sultano">
+    <meta property="og:title" content="Catalogo Prodotti | Profumeria del Sultano">
+    <meta property="og:description" content="Esplora il catalogo dei profumi arabi di lusso. Filtra per brand, tipo e prezzo.">
+    <meta property="og:url" content="https://www.profumeriadelsultano.it/prodotti.html">
+    <meta property="og:image" content="https://www.profumeriadelsultano.it/images/slider2.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Catalogo Prodotti | Profumeria del Sultano">
+    <meta name="twitter:description" content="Esplora il catalogo dei profumi arabi di lusso. Filtra per brand, tipo e prezzo.">
+    <meta name="twitter:image" content="https://www.profumeriadelsultano.it/images/slider2.jpg">
+
+    <!-- JSON-LD ItemList (viene aggiornato lato JS se necessario) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Catalogo Prodotti",
+      "itemListOrder": "https://schema.org/ItemListOrderAscending"
+    }
+    </script>
+</head>
+<body>
+
+<header>
+    <div class="logo">Profumeria del Sultano</div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="prodotti.html" class="active">Prodotti</a></li>
+            <li><a href="chi-siamo.html">Chi Siamo</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+            <li id="nav-login"><a id="link-login" href="#">Accedi / Registrati</a></li>
+            <li id="nav-account" style="display:none"><a href="https://profumeriadelsultano.myshopify.com/account" target="_blank">Account</a></li>
+            <li id="nav-logout" style="display:none"><a id="link-logout" href="#">Esci</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>La Nostra Collezione</h1>
+    <p>Scopri i profumi arabi di lusso di Profumeria del Sultano</p>
+</section>
+
+<main class="products-page">
+    <!-- Icona filtri -->
+    <div class="filters-container">
+        <div class="filters">
+            <div class="filters-toggle"><img src="images/filter-icon.png" alt="Filtri" style="width:24px;"></div>
+            <div class="filters-content">
+                <label>
+                    Nome:
+                    <input type="text" id="search-name" placeholder="Cerca prodotto...">
+                </label>
+                <label>
+                    Prezzo Min:
+                    <input type="number" id="min-price" placeholder="0">
+                </label>
+                <label>
+                    Prezzo Max:
+                    <input type="number" id="max-price" placeholder="∞">
+                </label>
+                <label>
+                    Brand:
+                    <select id="brand">
+                        <option value="">Tutti</option>
+                    </select>
+                </label>
+                <label>
+                    Tipo:
+                    <select id="tipo">
+                        <option value="">Tutti</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Griglia prodotti -->
+    <div class="products-grid" id="products-grid">
+        <!-- I prodotti verranno caricati dinamicamente via JavaScript -->
+    </div>
+</main>
+
+
+<footer>
+    <p>© 2025 Profumeria del Sultano · Tutti i diritti riservati</p>
+    <p>Powered by Shopify</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
+<script src="shopify-cart.js"></script>
+<script src="auth.js"></script>
+<script src="main.js"></script>
+<script src="placeholder-images.js"></script>
+
+
+
+
+<!-- Auth Modal -->
+<div id="auth-modal" style="display:none; position:fixed; inset:0; background: rgba(0,0,0,.5); z-index:2000;">
+  <div style="width:90%; max-width:420px; margin: 6rem auto; background:#fff; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.2); overflow:hidden;">
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 1.25rem; border-bottom:1px solid #eee;">
+      <strong>Area Cliente</strong>
+      <button id="auth-close" style="background:none; border:none; font-size:20px; cursor:pointer">×</button>
+    </div>
+    <div style="padding:1rem 1.25rem;">
+      <div style="display:flex; gap:.5rem; margin-bottom:1rem;">
+        <button data-auth-tab="auth-login-form" style="padding:.5rem 1rem; border:1px solid #ddd; background:#fafafa; cursor:pointer; border-radius:8px;">Accedi</button>
+        <button data-auth-tab="auth-register-form" style="padding:.5rem 1rem; border:1px solid #ddd; background:#fafafa; cursor:pointer; border-radius:8px;">Registrati</button>
+      </div>
+
+      <form id="auth-login-form" class="auth-form" style="display:block; display:flex; flex-direction:column; gap:.75rem;">
+        <label>Email
+          <input type="email" name="email" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <label>Password
+          <input type="password" name="password" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <button type="submit" style="background:#d4b670; border:none; padding:.7rem 1rem; border-radius:8px; cursor:pointer; font-weight:700;">Accedi</button>
+      </form>
+
+      <form id="auth-register-form" class="auth-form" style="display:none; flex-direction:column; gap:.75rem;">
+        <label>Nome
+          <input type="text" name="firstName" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <label>Cognome
+          <input type="text" name="lastName" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <label>Email
+          <input type="email" name="email" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <label>Password
+          <input type="password" name="password" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <button type="submit" style="background:#d4b670; border:none; padding:.7rem 1rem; border-radius:8px; cursor:pointer; font-weight:700;">Crea account</button>
+      </form>
+
+      <div id="auth-message" style="margin-top:1rem; color:#555;"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

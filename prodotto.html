@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profumeria del Sultano | Dettaglio Prodotto</title>
+    <meta name="description" content="Scopri i dettagli dei nostri profumi arabi di lusso. Acquista online con spedizione rapida e garantita.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
+    <script src="shopify-cart.js"></script>
+    <script src="auth.js"></script>
+    <script src="main.js" defer></script>
+    
+    <!-- SEO base -->
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#d4b670">
+    <link rel="canonical" href="https://www.profumeriadelsultano.it/prodotto.html">
+    <link rel="alternate" hreflang="it-IT" href="https://www.profumeriadelsultano.it/prodotto.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.profumeriadelsultano.it/prodotto.html">
+
+    <!-- Open Graph (verrà aggiornato dinamicamente) -->
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:type" content="product">
+    <meta property="og:site_name" content="Profumeria del Sultano">
+    <meta property="og:title" content="Dettaglio Prodotto | Profumeria del Sultano">
+    <meta property="og:description" content="Scopri i dettagli dei nostri profumi arabi di lusso.">
+    <meta property="og:url" content="https://www.profumeriadelsultano.it/prodotto.html">
+    <meta property="og:image" content="https://www.profumeriadelsultano.it/images/slider1.jpg">
+
+    <!-- Twitter (verrà aggiornato dinamicamente) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dettaglio Prodotto | Profumeria del Sultano">
+    <meta name="twitter:description" content="Scopri i dettagli dei nostri profumi arabi di lusso.">
+    <meta name="twitter:image" content="https://www.profumeriadelsultano.it/images/slider1.jpg">
+</head>
+<body>
+
+<header>
+    <div class="logo">Profumeria del Sultano</div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="prodotti.html">Prodotti</a></li>
+            <li><a href="chi-siamo.html">Chi Siamo</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+            <li id="nav-login"><a id="link-login" href="#">Accedi / Registrati</a></li>
+            <li id="nav-account" style="display:none"><a href="https://profumeriadelsultano.myshopify.com/account" target="_blank">Account</a></li>
+            <li id="nav-logout" style="display:none"><a id="link-logout" href="#">Esci</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="product-detail-page">
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> > <a href="prodotti.html">Prodotti</a> > <span id="product-breadcrumb">Caricamento...</span>
+    </div>
+    
+    <div class="product-detail-container">
+        <div class="product-image">
+            <img id="product-image" src="" alt="Immagine prodotto">
+        </div>
+        <div class="product-info">
+            <h1 id="product-name">Caricamento...</h1>
+            <p class="brand" id="product-brand"></p>
+            <p class="type" id="product-type"></p>
+            <p class="price" id="product-price"></p>
+            
+            <div id="product-description-container">
+                <h3>Descrizione</h3>
+                <p class="description" id="product-description"></p>
+            </div>
+            
+            <div id="product-notes-container">
+                <h3>Note Olfattive</h3>
+                <p class="notes" id="product-notes"></p>
+            </div>
+            
+            <div class="product-actions">
+                <div id="shopify-product-button" class="shopify-buy-button"></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer>
+    <p>© 2025 Profumeria del Sultano · Tutti i diritti riservati</p>
+    <p>Powered by Shopify</p>
+</footer>
+
+<!-- Auth Modal -->
+<div id="auth-modal" style="display:none; position:fixed; inset:0; background: rgba(0,0,0,.5); z-index:2000;">
+  <div style="width:90%; max-width:420px; margin: 6rem auto; background:#fff; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.2); overflow:hidden;">
+    <div style="display:flex; justify-content:space-between; align-items:center; padding:1rem 1.25rem; border-bottom:1px solid #eee;">
+      <strong>Area Cliente</strong>
+      <button id="auth-close" style="background:none; border:none; font-size:20px; cursor:pointer">×</button>
+    </div>
+    <div style="padding:1rem 1.25rem;">
+      <div style="display:flex; gap:.5rem; margin-bottom:1rem;">
+        <button data-auth-tab="auth-login-form" style="padding:.5rem 1rem; border:1px solid #ddd; background:#fafafa; cursor:pointer; border-radius:8px;">Accedi</button>
+        <button data-auth-tab="auth-register-form" style="padding:.5rem 1rem; border:1px solid #ddd; background:#fafafa; cursor:pointer; border-radius:8px;">Registrati</button>
+      </div>
+
+      <form id="auth-login-form" class="auth-form" style="display:block; display:flex; flex-direction:column; gap:.75rem;">
+        <label>Email
+          <input type="email" name="email" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <label>Password
+          <input type="password" name="password" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <button type="submit" style="background:#d4b670; border:none; padding:.7rem 1rem; border-radius:8px; cursor:pointer; font-weight:700;">Accedi</button>
+      </form>
+
+      <form id="auth-register-form" class="auth-form" style="display:none; flex-direction:column; gap:.75rem;">
+        <label>Nome
+          <input type="text" name="firstName" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <label>Cognome
+          <input type="text" name="lastName" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <label>Email
+          <input type="email" name="email" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <label>Password
+          <input type="password" name="password" required style="width:100%; padding:.6rem .7rem; border:1px solid #ddd; border-radius:8px;">
+        </label>
+        <button type="submit" style="background:#d4b670; border:none; padding:.7rem 1rem; border-radius:8px; cursor:pointer; font-weight:700;">Crea account</button>
+      </form>
+
+      <div id="auth-message" style="margin-top:1rem; color:#555;"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let currentProductId = null;
+
+        // Carica dettagli prodotto
+        function loadProductDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            currentProductId = urlParams.get('id');
+            
+            if (!currentProductId) {
+                window.location.href = 'prodotti.html';
+                return;
+            }
+            
+            fetch('products.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('Errore nel caricamento prodotti');
+                    return response.json();
+                })
+                .then(products => {
+                    const product = products.find(p => p.shopifyId === currentProductId);
+                    
+                    if (!product) {
+                        showError('Prodotto non trovato');
+                        setTimeout(() => window.location.href = 'prodotti.html', 2000);
+                        return;
+                    }
+                    
+                    populateProductDetails(product);
+                    setProductSEO(product);
+                    const btn = document.getElementById('shopify-product-button');
+                    if (btn) {
+                        btn.setAttribute('data-product-id', product.shopifyId);
+                        if (typeof initShopifyButtons === 'function') {
+                            initShopifyButtons();
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Errore:', error);
+                    showError('Errore nel caricamento del prodotto');
+                });
+        }
+
+        function populateProductDetails(product) {
+            // Immagine
+            const productImage = document.getElementById('product-image');
+            productImage.src = product.image;
+            productImage.alt = product.name + ' - Profumeria del Sultano';
+            
+            // Informazioni base
+            document.getElementById('product-name').textContent = product.name;
+            document.getElementById('product-brand').textContent = product.brand;
+            document.getElementById('product-type').textContent = product.tipo || '';
+            document.getElementById('product-price').textContent = `€${product.price}`;
+            document.getElementById('product-breadcrumb').textContent = product.name;
+            
+            // Descrizione
+            if (product.description) {
+                document.getElementById('product-description').textContent = product.description;
+                document.getElementById('product-description-container').style.display = 'block';
+            } else {
+                document.getElementById('product-description-container').style.display = 'none';
+            }
+            
+            // Note olfattive
+            if (product.notes) {
+                document.getElementById('product-notes').textContent = product.notes;
+                document.getElementById('product-notes-container').style.display = 'block';
+            } else {
+                document.getElementById('product-notes-container').style.display = 'none';
+            }
+        }
+
+        
+        function setProductSEO(product) {
+            try {
+                // Title
+                document.title = `${product.name} | ${product.brand} - Profumeria del Sultano`;
+                // Description
+                const desc = product.description || 'Scopri i dettagli dei nostri profumi arabi di lusso.';
+                let md = document.querySelector('meta[name="description"]');
+                if(!md){ md = document.createElement('meta'); md.setAttribute('name','description'); document.head.appendChild(md); }
+                md.setAttribute('content', desc);
+                // Canonical
+                const canonicalUrl = `https://www.profumeriadelsultano.it/prodotto.html?id=${product.shopifyId}`;
+                let linkCanon = document.querySelector('link[rel="canonical"]');
+                if(!linkCanon){ linkCanon = document.createElement('link'); linkCanon.setAttribute('rel','canonical'); document.head.appendChild(linkCanon); }
+                linkCanon.setAttribute('href', canonicalUrl);
+                // Helpers for meta
+                const upsert = (selector, attr, value) => {
+                    let el = document.querySelector(selector);
+                    if(!el){ el = document.createElement('meta');
+                        if(selector.includes('property')){
+                            el.setAttribute('property', selector.match(/property="([^"]+)/)?.[1] || '');
+                        } else {
+                            el.setAttribute('name', selector.match(/name="([^"]+)/)?.[1] || '');
+                        }
+                        document.head.appendChild(el);
+                    }
+                    el.setAttribute(attr, value);
+                };
+                const absImg = `https://www.profumeriadelsultano.it/${product.image}`;
+                // Open Graph
+                upsert('meta[property="og:title"]','content', `${product.name} | ${product.brand}`);
+                upsert('meta[property="og:description"]','content', desc);
+                upsert('meta[property="og:url"]','content', canonicalUrl);
+                upsert('meta[property="og:image"]','content', absImg);
+                // Twitter
+                upsert('meta[name="twitter:title"]','content', `${product.name} | ${product.brand}`);
+                upsert('meta[name="twitter:description"]','content', desc);
+                upsert('meta[name="twitter:image"]','content', absImg);
+                // JSON-LD Product
+                const jsonLdId = 'product-jsonld';
+                let jsonEl = document.getElementById(jsonLdId);
+                if(!jsonEl){ jsonEl = document.createElement('script'); jsonEl.type='application/ld+json'; jsonEl.id=jsonLdId; document.head.appendChild(jsonEl); }
+                const data = {
+                  "@context": "https://schema.org",
+                  "@type": "Product",
+                  "name": product.name,
+                  "image": [absImg],
+                  "description": desc,
+                  "sku": product.shopifyId,
+                  "brand": { "@type": "Brand", "name": product.brand },
+                  "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "EUR",
+                    "price": product.price,
+                    "availability": "https://schema.org/InStock",
+                    "url": canonicalUrl
+                  }
+                };
+                jsonEl.textContent = JSON.stringify(data);
+            } catch(e){ console.warn('SEO product setup failed:', e); }
+        }
+
+        function showError(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification error';
+            notification.innerHTML = `
+                <div class="notification-content">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>${message}</p>
+                </div>
+            `;
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 5000);
+        }
+
+        loadProductDetails();
+    });
+</script>
+
+</body>
+</html>
